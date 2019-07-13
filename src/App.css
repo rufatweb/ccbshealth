@@ -35,3 +35,11 @@
 li:last-child {
 border-right: none
 }
+
+li:first-child {
+border-right: none
+}
+
+h5 {
+margin-bottom: 1%;
+}

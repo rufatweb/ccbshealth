@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { Button, Icon } from "semantic-ui-react";
 
 const Banner = props => {
   return (
@@ -11,8 +12,16 @@ const Banner = props => {
         <h2> Information thing Services </h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua.
         </p>
+        <Button animated="fade">
+          <Button.Content visible> Get a free quote </Button.Content>
+          <Button.Content hidden>
+            <Icon name="mail" />
+          </Button.Content>
+        </Button>
       </FreeQuoteContainer>
     </BannerContainer>
   );
@@ -23,6 +32,7 @@ const BannerContainer = styled.div`
   /* flex-direction: row-reverse; */
   width: 100%;
   height: 100vh;
+  /* margin-bottom: 5%; */
 `;
 
 const StyledImg = styled.img`
@@ -47,6 +57,19 @@ const FreeQuoteContainer = styled.div`
 transform: translate(-50%,-50%); */
   padding: 2% 5%;
   width: 600px;
+  border-radius: 2%;
+  &:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: solid 50px white;
+    border-left: solid 50px transparent;
+  }
 `;
 
 export default Banner;

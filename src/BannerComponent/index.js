@@ -16,7 +16,7 @@ const Banner = props => {
           ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.
         </p>
-        <Button animated="fade">
+        <Button as={AnchorTag} href="#form" to onClick={props.showForm} animated="fade">
           <Button.Content visible> Get a free quote </Button.Content>
           <Button.Content hidden>
             <Icon name="mail" />
@@ -26,6 +26,8 @@ const Banner = props => {
     </BannerContainer>
   );
 };
+
+const AnchorTag = styled.a``;
 
 const BannerContainer = styled.div`
   /* display: flex; */

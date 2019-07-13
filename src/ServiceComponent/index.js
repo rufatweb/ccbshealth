@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Grid, Button, Icon, Header } from "semantic-ui-react";
 import styled from "styled-components";
 
-const ServicesContainer = () => {
+const ServicesContainer = (props) => {
   return (
     <Container>
       <OurServices as="h2">Our Services</OurServices>
@@ -20,7 +20,7 @@ const ServicesContainer = () => {
                   feugiat in.
                 </Card.Description>
               </Card.Content>
-              <Button animated="fade">
+              <Button as={AnchorTag} href="#form" onClick={props.showForm} animated="fade">
                 <Button.Content visible> Get a free quote </Button.Content>
                 <Button.Content hidden>
                   <Icon name="mail" />
@@ -40,7 +40,7 @@ const ServicesContainer = () => {
                   feugiat in.
                 </Card.Description>
               </Card.Content>
-              <Button animated="fade">
+              <Button as={AnchorTag} href="#form" onClick={props.showForm} animated="fade">
                 <Button.Content visible> Get a free quote </Button.Content>
                 <Button.Content hidden>
                   <Icon name="mail" />
@@ -53,6 +53,8 @@ const ServicesContainer = () => {
     </Container>
   );
 };
+
+const AnchorTag = styled.a``;
 
 const StyledCard = styled(Card)`
   &&& {

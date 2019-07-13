@@ -43,3 +43,9 @@ border-right: none
 h5 {
 margin-bottom: 1%;
 }
+
+.ui.form {
+   max-width: 50%;
+   margin: auto;
+   margin-bottom: 5%;
+}

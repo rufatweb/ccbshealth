@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 const ServicesContainer = () => {
   return (
-    <>
+    <Container>
       <OurServices as="h2">Our Services</OurServices>
       <Card.Group>
         <Grid columns="equal" style={{ width: "100%" }}>
@@ -50,19 +50,24 @@ const ServicesContainer = () => {
           </Grid.Column>
         </Grid>
       </Card.Group>
-    </>
+    </Container>
   );
 };
 
 const StyledCard = styled(Card)`
   &&& {
     width: 500px;
-    padding: 3%;
+    padding: 5%;
   }
 `;
 
-const OurServices = styled(Header)`
+const Container = styled.div`
+  margin-top: 3%;
   margin-bottom: 5%;
+`;
+
+const OurServices = styled(Header)`
+  margin-bottom: 4%;
 `;
 
 export default ServicesContainer;

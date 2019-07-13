@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Banner from "./BannerComponent";
-import NavBar from "./NavBar.js";
+import NavBar from "./NavBar";
 import ServicesContainer from "./ServiceComponent";
 
 function App() {

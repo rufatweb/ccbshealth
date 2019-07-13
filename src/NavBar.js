@@ -8,9 +8,9 @@ const NavBar = (props) => {
       <NavContainer>
       <UlTag>
       <LiTag><LogoImg alt="logo" src="logo_ccbs.JPG" /></LiTag>
-      <LiTag><Icon name='clock outline' />business hours</LiTag>
-      <LiTag><Icon name='phone' />phone</LiTag>
-      <LiTag><Icon name='home' />address</LiTag>
+      <LiTag><h5><Icon name='clock outline' />business hours</h5><p>Mon-Fri 9am-6pm</p></LiTag>
+      <LiTag><h5><Icon name='phone' />phone</h5></LiTag>
+      <LiTag><h5><Icon name='home' />address</h5></LiTag>
       </UlTag>
 
     </NavContainer>
@@ -18,24 +18,29 @@ const NavBar = (props) => {
 
 }
 
+const PTag = styled.li`
+
+`;
 
 const UlTag = styled.ul`
    list-style-type: none;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
 `;
 
 const LiTag = styled.li`
-    float: left;
+
 `;
 
 
 const NavContainer = styled.div`
-   border: 1px solid #87919e;
-   float: right;
-   max-width: 100%;
-   width: 100%;
+
 `;
 
 const LogoImg = styled.img`
    height: 10vh;
 `;
+
 export default NavBar;

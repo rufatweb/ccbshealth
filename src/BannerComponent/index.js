@@ -6,18 +6,18 @@ const Banner = props => {
   return (
     <BannerContainer>
       <StyledFigure>
-        <StyledImg alt="Banner" src="https://picsum.photos/id/1012/3973/2639" />
+        <StyledImg />
       </StyledFigure>
       <FreeQuoteContainer>
-        <h2> Information thing Services </h2>
+        <h2> About us </h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.
+          Care Consultants Better Solutions, Inc. offers release of information services nationwide.
+            We cater our services to meet your direct needs,
+            and always process any and all of your requests at <strong>NO COST</strong> – to include your non-billable medical records requests.
+            We have been in business since 2002, and pride ourselves on the motto of "Patient Care Focused Release of Information Services."
         </p>
-        <Button as={AnchorTag} href="#form" to onClick={props.showForm} animated="fade">
-          <Button.Content visible> Get a free quote </Button.Content>
+        <Button as={AnchorTag} href="/#form" to onClick={props.showForm} animated="fade">
+          <Button.Content visible> Contact Us </Button.Content>
           <Button.Content hidden>
             <Icon name="mail" />
           </Button.Content>
@@ -26,6 +26,7 @@ const Banner = props => {
     </BannerContainer>
   );
 };
+
 
 const AnchorTag = styled.a``;
 
@@ -38,11 +39,12 @@ const BannerContainer = styled.div`
 `;
 
 const StyledImg = styled.img`
-  height: 100vh;
+  height: 80vh;
   display: block;
   margin: auto;
   max-width: 100%;
   width: 100%;
+  background-color: gray;
 `;
 
 const StyledFigure = styled.figure`

@@ -23,7 +23,7 @@ const H5pContainer = styled.div`
    width: 15em;
 `;
 
-const PTag = styled.li`
+const PTag = styled.p`
    height: 10%;
    font-size: 10px;
    color: #505050;

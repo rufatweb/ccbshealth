@@ -44,8 +44,12 @@ h5 {
 margin-bottom: 1%;
 }
 
-.ui.form {
+.ui.form, .thanks {
    max-width: 50%;
    margin: auto;
    margin-bottom: 5%;
+}
+
+.thanks {
+  font-size: 35px;
 }

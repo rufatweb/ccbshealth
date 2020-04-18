@@ -11,16 +11,14 @@ const ServicesContainer = (props) => {
           <Grid.Column>
             <StyledCard centered>
               <Card.Content>
-                <Card.Header>Release of information</Card.Header>
+                <Card.Header>Release of Information</Card.Header>
                 <Card.Meta />
                 <Card.Description>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Sed adipiscing diam donec adipiscing tristique risus nec
-                  feugiat in.
+                  Not only will we keep your facility fully HIPAA compliant, but we will also streamline the entire ROI process to better serve both your patients and requestors.
+                  As well as offering totally free of charge onsite, full services ROI – we also offer remote and revenue share plans.  Ask us how we can save your facility labor and expenses by handling your medical records requests remotely.
                 </Card.Description>
               </Card.Content>
-              <Button as={AnchorTag} href="#form" onClick={props.showForm} animated="fade">
+              <Button as={AnchorTag} href="/#form" onClick={props.showForm} animated="fade">
                 <Button.Content visible> Get a free quote </Button.Content>
                 <Button.Content hidden>
                   <Icon name="mail" />
@@ -31,13 +29,11 @@ const ServicesContainer = (props) => {
           <Grid.Column>
             <StyledCard centered>
               <Card.Content>
-                <Card.Header>Matthew Harris</Card.Header>
+                <Card.Header>Storage Services</Card.Header>
                 <Card.Meta />
                 <Card.Description>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Sed adipiscing diam donec adipiscing tristique risus nec
-                  feugiat in.
+                  In addition to our release of information services, we also offer paper chart storage services to hospitals and clinics.  Is your hospital or clinic closing?  We can store your paper charts and handle your medical records requests after your facility closes.
+                  We have several storage warehouse locations across the United States, and will keep your facility compliant according to your states records retention policies.
                 </Card.Description>
               </Card.Content>
               <Button as={AnchorTag} href="#form" onClick={props.showForm} animated="fade">

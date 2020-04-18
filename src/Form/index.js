@@ -1,6 +1,6 @@
 import React from 'react'
 import { Button, Form } from 'semantic-ui-react'
-
+import * as emailjs from 'emailjs-com'
 
 class QuoteForm extends React.Component {
 
@@ -19,12 +19,39 @@ class QuoteForm extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault()
     console.log(this.state)
-    this.setState({name: '',
-    companyName: '',
-    phoneNumber: '',
-    email: '',
-    comment: ''})
-  }
+
+  const { name, companyName, phoneNumber, email, comment } = this.state
+
+  let templateParams = {
+      from_name: name,
+      emailAddress: email,
+      notes: comment,
+      phone: phoneNumber,
+      company: companyName
+    }
+
+
+     emailjs.send(
+      'rufat_web@gmail_com',
+      'template_Uv0n3Bxw',
+       templateParams,
+      'user_DsPQJXfrLstvUgUPqLS9E'
+    ).then(function(response) {
+         console.log('SUCCESS!', response);
+      }, function(error) {
+         console.log('FAILED...', error);
+      });
+
+
+
+   this.setState({name: '',
+     companyName: '',
+     phoneNumber: '',
+     email: '',
+     comment: ''})
+
+     this.props.handleSubmit()
+    }
 
   render () {
     return  <div id="form">
@@ -39,17 +66,17 @@ class QuoteForm extends React.Component {
     </Form.Field>
     <Form.Field>
       <label>Phone Number</label>
-      <input name='phoneNumber' value={this.state.phoneNumber} placeholder='Phone Number' onChange={this.handleChange}/>
+      <input name='phoneNumber' type="number" value={this.state.phoneNumber} placeholder='Phone Number' onChange={this.handleChange}/>
     </Form.Field>
     <Form.Field>
       <label>Email Address</label>
-      <input name='email' value={this.state.email} placeholder='email' onChange={this.handleChange}/>
+      <input name='email' type="email" value={this.state.email} placeholder='Email Address' onChange={this.handleChange}/>
     </Form.Field>
     <Form.Field>
       <label>Comments</label>
       <textarea name='comment' value={this.state.comment} placeholder='...' onChange={this.handleChange}/>
     </Form.Field>
-    <Button type='submit' >Get your quote</Button>
+    <Button type='submit'>Get your quote</Button>
   </Form>
   </div>
   }

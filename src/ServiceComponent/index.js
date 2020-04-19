@@ -60,7 +60,6 @@ const StyledCard = styled(Card)`
 `;
 
 const Container = styled.div`
-  margin-top: 3%;
   margin-bottom: 5%;
 `;
 

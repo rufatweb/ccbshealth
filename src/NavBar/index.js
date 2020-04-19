@@ -8,7 +8,7 @@ const NavBar = (props) => {
     return (
       <NavContainer>
       <UlTag>
-      <LiTag><LogoImg alt="logo" src="logo.jpg" /></LiTag>
+      <LiTag><LogoImg alt="logo" src='https://ccbs-logo.s3.us-east-2.amazonaws.com/ccbs-logo/222.jpg' /></LiTag>
       <LiTag><Icon name='clock outline' /><H5pContainer><h5>business hours</h5><PTag>Mon-Fri 9am-6pm</PTag></H5pContainer></LiTag>
       <LiTag><Icon name='phone' /><H5pContainer><h5>phone</h5><PTag>(954) 299-5071</PTag></H5pContainer></LiTag>
       <LiTag><Icon name='home' /><H5pContainer><h5>address</h5><PTag>300 E Oakland Park Blvd.</PTag></H5pContainer></LiTag>

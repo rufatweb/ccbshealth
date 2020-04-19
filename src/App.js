@@ -4,7 +4,7 @@ import Banner from "./BannerComponent";
 import NavBar from "./NavBar";
 import ServicesContainer from "./ServiceComponent";
 import QuoteForm from "./Form"
-import axois from "axios";
+import Footer from "./Footer";
 
 class App extends React.Component {
 
@@ -29,7 +29,9 @@ render () {
       <ServicesContainer showForm={this.showForm}/>
       {this.state.showForm && <QuoteForm handleSubmit={this.handleSubmit}/>}
       {(this.state.submitted) ? <div className="thanks"> Thanks. Someone will be in touch soon. </div>: null}
+      <Footer/>
     </div>
+
   );
 }
 

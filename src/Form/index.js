@@ -32,7 +32,7 @@ class QuoteForm extends React.Component {
 
 
      emailjs.send(
-      'rufat_web@gmail_com',
+      'gmail',
       'template_Uv0n3Bxw',
        templateParams,
       'user_DsPQJXfrLstvUgUPqLS9E'
